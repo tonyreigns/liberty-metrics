@@ -8,6 +8,7 @@
         <feature>mpMetrics-2.2</feature>
         <feature>appSecurity-3.0</feature>
         <feature>socialLogin-1.0</feature>
+	<feature>jaxrs-2.1</feature>
     </featureManager>
 	
     <okdServiceLogin userValidationApi="https://api.kiali.os.fyre.ibm.com:6443/apis/user.openshift.io/v1/users/~" />
