@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>jsp-2.3</feature>
+        <feature>monitor-1.0</feature>
+        <feature>mpMetrics-2.2</feature>
+        <feature>appSecurity-3.0</feature>
+        <feature>socialLogin-1.0</feature>
+    </featureManager>
+	
+    <okdServiceLogin userValidationApi="https://api.kiali.os.fyre.ibm.com:6443/apis/user.openshift.io/v1/users/~" />
+    
+    <okdServiceLogin userValidationApi="https://api.kiali.os.fyre.ibm.com:6443/apis/user.openshift.io/v1/users/~" realmName="okd123"/>
+    <reader-role>
+         <group-access-id>group:okd123/testing1</group-access-id>
+    </reader-role>
+
+    <!--access log -->
+    <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="9080" httpsPort="9443">
+    	<accessLogging
+    		filepath="${server.output.dir}/logs/http_defaultEndpoint_access.log"
+    		logFormat='%{Authorization}i %{User-agent}i %h %u %t "%r" %s %b %D'>
+    	</accessLogging>
+    </httpEndpoint>
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+</server>
