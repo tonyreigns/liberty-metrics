@@ -8,6 +8,8 @@
         <feature>mpMetrics-2.2</feature>
         <feature>appSecurity-3.0</feature>
 	<feature>jaxrs-2.1</feature>
+	<feature>mpConfig-1.4</feature>
+        <feature>mpOpenTracing-1.3</feature>
     </featureManager>
 	
     <okdServiceLogin userValidationApi="https://api.kiali.os.fyre.ibm.com:6443/apis/user.openshift.io/v1/users/~" />
@@ -17,6 +19,7 @@
          <group-access-id>group:okd123/testing1</group-access-id>
     </reader-role>
 
+    <mpMetrics authentication="false"/>
     <!--access log -->
     <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="9080" httpsPort="9443">
     	<accessLogging
