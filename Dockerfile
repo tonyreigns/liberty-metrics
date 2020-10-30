@@ -7,4 +7,4 @@ ADD --chown=1001:0     ./server.xml                    /config/server.xml
 ADD --chown=1001:0     ./bootstrap.properties          /config/bootstrap.properties
 ADD --chown=1001:0     ./demoMetrics.war               /config/dropins
 ADD --chown=1001:0     ./server.env                    /config/server.env
-
+ADD --chown=1001:0     ./jvm.options                   /config/jvm.options
