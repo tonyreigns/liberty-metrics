@@ -32,7 +32,7 @@
     <!-- Automatically expand WAR files and EAR files -->
    <!-- <applicationManager autoExpand="true"/>-->
 
-   <webApplication location="system.war" contextRoot="/">
+   <webApplication location="demoMetrics.war" contextRoot="/">
         <classloader apiTypeVisibility="+third-party"/>
     </webApplication>
 </server>
